@@ -1,0 +1,10 @@
+{
+  "components": {
+    "search_button": {
+      "description": "Search button",
+      "package": "custom_search_button",
+      "version": "1.0",
+      "updatedAt": "2026-05-21T08:36:34.114243Z"
+    }
+  }
+}
