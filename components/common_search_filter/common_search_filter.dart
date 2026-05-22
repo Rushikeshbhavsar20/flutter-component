@@ -41,6 +41,7 @@ class DropdownOption<T> {
   const DropdownOption({required this.label, required this.value});
 }
 
+//Checking Compkit
 class ToggleFilterConfig {
   final String label;
   final String apiKey;
@@ -801,12 +802,9 @@ class _DropdownTile extends StatelessWidget {
     final hasValue = value != null;
     final selectedLabel = hasValue
         ? config.options
-            .cast<DropdownOption?>()
-            .firstWhere(
-              (o) => o?.value == value,
-              orElse: () => null,
-            )
-            ?.label
+              .cast<DropdownOption?>()
+              .firstWhere((o) => o?.value == value, orElse: () => null)
+              ?.label
         : null;
 
     return Column(
@@ -867,11 +865,8 @@ class _DropdownTile extends StatelessWidget {
             selectedLabel ?? 'Select ${config.label.toLowerCase()}...',
             style: TextStyle(
               fontSize: 14,
-              color: hasValue
-                  ? AppColors.primary
-                  : const Color(0xFFCBD5E1),
-              fontWeight:
-                  hasValue ? FontWeight.w600 : FontWeight.w400,
+              color: hasValue ? AppColors.primary : const Color(0xFFCBD5E1),
+              fontWeight: hasValue ? FontWeight.w600 : FontWeight.w400,
             ),
           ),
           items: [
@@ -885,10 +880,7 @@ class _DropdownTile extends StatelessWidget {
             ...config.options.map(
               (o) => DropdownMenuItem<dynamic>(
                 value: o.value,
-                child: Text(
-                  o.label,
-                  style: const TextStyle(fontSize: 14),
-                ),
+                child: Text(o.label, style: const TextStyle(fontSize: 14)),
               ),
             ),
           ],
