@@ -5,6 +5,12 @@
       "package": "custom_search_button",
       "version": "1.0",
       "updatedAt": "2026-05-21T08:36:34.114243Z"
+    },
+    "common_search_filter": {
+      "description": "search",
+      "file": "common_search_filter.dart",
+      "hasReadme": false,
+      "updatedAt": "2026-05-22T05:34:31.411255Z"
     }
   }
 }
